@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Quiz Title -->
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cuestionario de Aplicaciones Moviles"
+        android:textColor="@color/cardview_light_background"
+        android:background="@drawable/rounded_title_content"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:textSize="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+    />
+
+    <!-- Quiz Question Number -->
+    <LinearLayout
+        android:id="@+id/layoutQuestionNumber"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_no_content"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="32dp"
+        >
+
+        <TextView
+            android:id="@+id/txtNoQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cardview_light_background"
+            android:textAlignment="center"
+            android:text="PREGUNTA No.01"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <!-- Quiz Question -->
+    <LinearLayout
+        android:id="@+id/layoutQuestion"
+        android:layout_width="0dp"
+        android:layout_height="472dp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_question_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="100dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"
+        app:layout_constraintBottom_toTopOf="@id/txtPoints"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Question -->
+        <TextView
+            android:id="@+id/txtQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:translationY="-30dp"
+            android:text="Pregunta01"
+            android:textAlignment="center"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnAnswer01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#6d7cb1"
+            android:text="Respuesta01" />
+
+        <Button
+            android:id="@+id/btnAnswer02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#6d7cb1"
+            android:text="Respuesta02" />
+
+        <Button
+            android:id="@+id/btnAnswer03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#6d7cb1"
+            android:text="Respuesta03" />
+
+        <Button
+            android:id="@+id/btnAnswer04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:backgroundTint="#6d7cb1"
+            android:text="Respuesta04" />
+
+        <Button
+            android:id="@+id/btnRespond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:translationY="30dp"
+            android:padding="13dp"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#6f81de"
+            android:textSize="17sp"
+            android:text="Seleccionar" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtPoints"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/cardview_light_background"
+        android:background="@drawable/rounded_end_content"
+        android:text="Puntos: 0pts"
+        android:textAlignment="center"
+        android:padding="12dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+    />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
